@@ -11,3 +11,27 @@
 5. rpm -ivh 后面跟rpm包进行包安装
 6. rpm -e 后面跟rpm -qa命令查询出来的包名进行卸载
 
+## 在ubuntu上安装git gui客户端GitKraken
+
+参考： https://www.cnblogs.com/EasonJim/p/7209135.html
+
+## ubuntu上安装wine和notepad++
+
+ https://www.configserverfirewall.com/ubuntu-linux/install-wine-ubuntu-16-04/
+
+## How to uninstall pip2 
+
+
+If you installed pip like this:
+
+ - sudo apt install python-pip
+ - sudo apt install python3-pip
+
+Uninstall them like this:
+
+ - sudo apt remove python-pip
+ - sudo apt remove python3-pip
+
+## How to install Pip3 & Django on Ubuntu 18.04 / Ubuntu 16.04 LTS
+
+sudo apt -y install python3-pip
