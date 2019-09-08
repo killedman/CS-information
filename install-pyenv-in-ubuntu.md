@@ -65,17 +65,29 @@
 ## pyenv 结合 virtualenv 创建虚拟环境
 
 > pyenv virtualenv 3.4.3 TEST
+>
 > pyenv activate TEST
+>
 > pyenv deactivate
+>
 > pyenv uninstall TEST
+>
 > For example, to install 3.7, check which versions are available:
+>
 > pyenv install -l | grep 3.7
+>
 > Then run:
+>
 > pyenv install 3.7.1
+>
 > Now, you can choose your Python version:
+>
 > pyenv global 3.7.1
+>
 > This switches your python to point to 3.7.1. If you want the system python, run:
+>
 > pyenv global system
+>
 > To check which Python versions are available, run pyenv versions.
 
 
@@ -105,38 +117,42 @@ pyenv activate  my-virtual-env-3.7.3
 
 ##  pyenv 常用的命令说明
 
-> 使用方式: pyenv <命令> [<参数>]
+> ```
+> > 使用方式: pyenv <命令> [<参数>]
+> >
+> > 命令:
+> > commands    查看所有命令
+> > local       设置或显示本地的Python版本
+> > global      设置或显示全局Python版本
+> > shell       设置或显示shell指定的Python版本
+> > install     安装指定Python版本
+> > uninstall   卸载指定Python版本)
+> > version     显示当前的Python版本及其本地路径
+> > versions    查看所有已经安装的版本
+> > which       显示安装路径
+> 
+> > pyenv
+> > pyenv 1.2.8
+> > Usage: pyenv <command> [<args>]
+> >
+> > Some useful pyenv commands are:
+> > commands    List all available pyenv commands
+> > local       Set or show the local application-specific Python version
+> > global      Set or show the global Python version
+> > shell       Set or show the shell-specific Python version
+> > install     Install a Python version using python-build
+> > uninstall   Uninstall a specific Python version
+> > rehash      Rehash pyenv shims (run this after installing executables)
+> > version     Show the current Python version and its origin
+> > versions    List all Python versions available to pyenv
+> > which       Display the full path to an executable
+> > whence      List all Python versions that contain the given executable
+> >
+> > See `pyenv help <command>' for information on a specific command.
+> > For full documentation, see: https://github.com/pyenv/pyenv#readme
+> ```
 >
-> 命令:
->    commands    查看所有命令
->    local       设置或显示本地的Python版本
->    global      设置或显示全局Python版本
->    shell       设置或显示shell指定的Python版本
->    install     安装指定Python版本
->    uninstall   卸载指定Python版本)
->    version     显示当前的Python版本及其本地路径
->    versions    查看所有已经安装的版本
->    which       显示安装路径
-
-> pyenv
-> pyenv 1.2.8
-> Usage: pyenv <command> [<args>]
->
-> Some useful pyenv commands are:
->    commands    List all available pyenv commands
->    local       Set or show the local application-specific Python version
->    global      Set or show the global Python version
->    shell       Set or show the shell-specific Python version
->    install     Install a Python version using python-build
->    uninstall   Uninstall a specific Python version
->    rehash      Rehash pyenv shims (run this after installing executables)
->    version     Show the current Python version and its origin
->    versions    List all Python versions available to pyenv
->    which       Display the full path to an executable
->    whence      List all Python versions that contain the given executable
->
-> See `pyenv help <command>' for information on a specific command.
-> For full documentation, see: https://github.com/pyenv/pyenv#readme
+> 
 >
 
 
@@ -144,16 +160,23 @@ pyenv activate  my-virtual-env-3.7.3
 ### python 配置
 
 > pyenv versions -- 查看系统当前安装的python列表
+>
 > pyenv install --list -- 查看可安装的版本
+>
 > pyenv install -v 3.5.1 -- 安装python
+>
 > pyenv uninstall 2.7.3 -- 卸载python
+>
 > pyenv rehash -- 创建垫片路径（为所有已安装的可执行文件创建 shims，如：~/.pyenv/versions/*/bin/*，因此，每当你增删了 Python 版本或带有可执行文件的包（如 pip）以后，都应该执行一次本命令）
 
 ### python 切换
 
 > pyenv global 3.4.0 -- 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
+>
 > pyenv local 2.7.3 -- 设置面向程序的本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+>
 > pyenv 会从当前目录开始向上逐级查找 .python-version 文件，直到根目录为止。若找不到，就用 global 版本。
+>
 > pyenv shell pypy-2.2.1 -- 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。--unset 参数可以用于取消当前 shell 设定的版本。
 > pyenv shell --unset
 
